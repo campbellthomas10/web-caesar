@@ -12,12 +12,12 @@ form = """<!DOCTYPE html>
         <style>
             body {{
                 font-family: Verdana, sans-seriff;
-                background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(38,52,230,1) 50%, rgba(0,212,255,1) 100%);
+                background: linear-gradient(90deg, rgba(254,254,254,1) 0%, rgba(55,55,55,1) 50%, rgba(255,255,255,1) 100%);
             }}
             h1 {{
                 text-align: center;
                 color: black;
-                background-color: rgba(222, 230, 242, 0.75);
+                background-color: rgba(255, 255, 255, 0.75);
                 width: 540px;
                 margin-top: 5%;
                 margin-left: auto;
@@ -34,7 +34,7 @@ form = """<!DOCTYPE html>
             }}
 
             form {{
-                background-color: rgba(222, 230, 242, 0.75);
+                background-color: rgba(255, 255, 255, 0.75);
                 padding: 20px;
                 margin: 0 auto;
                 width: 540px;
