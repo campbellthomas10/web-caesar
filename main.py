@@ -12,7 +12,7 @@ form = """<!DOCTYPE html>
         <style>
             body {{
                 font-family: Verdana, sans-seriff;
-                background: linear-gradient(90deg, rgba(254,254,254,1) 0%, rgba(55,55,55,1) 50%, rgba(255,255,255,1) 100%);
+                background: linear-gradient(90deg, rgba(201,230,206,1) 0%, rgba(139,242,124,1) 50%, rgba(201,230,206,1) 100%);
             }}
             h1 {{
                 text-align: center;
@@ -22,7 +22,7 @@ form = """<!DOCTYPE html>
                 margin-top: 5%;
                 margin-left: auto;
                 margin-right: auto;
-                border-radius: 25px;
+                border-radius: 15px;
             }}
 
             footer {{
@@ -51,7 +51,7 @@ form = """<!DOCTYPE html>
         </style>
     </head>
     <body>
-      <h1>Caesar Encrypter</h1>
+      <h1>Web Caesar</h1>
       <form method="POST">
         <label for="rot">Rotate by:</label>
         <input type="number" step=1 name="rot" value="0">
