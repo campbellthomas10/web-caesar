@@ -12,24 +12,29 @@ form = """<!DOCTYPE html>
         <style>
             body {{
                 font-family: Verdana, sans-seriff;
-                background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+                background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(38,52,230,1) 50%, rgba(0,212,255,1) 100%);
             }}
-
             h1 {{
                 text-align: center;
-                color: white;
+                color: black;
+                background-color: rgba(222, 230, 242, 0.75);
+                width: 540px;
+                margin-top: 5%;
+                margin-left: auto;
+                margin-right: auto;
+                border-radius: 25px;
             }}
 
             footer {{
                 color: white;
                 font-size: 8pt;
+                color: black;
                 width: 540px;
                 margin: 0 auto;
-                margin-top: 5px;
             }}
 
             form {{
-                background-color: #eee;
+                background-color: rgba(222, 230, 242, 0.75);
                 padding: 20px;
                 margin: 0 auto;
                 width: 540px;
@@ -41,6 +46,7 @@ form = """<!DOCTYPE html>
                 margin: 10px 0;
                 width: 540px;
                 height: 120px;
+                resize: vertical;
             }}
         </style>
     </head>
@@ -48,13 +54,13 @@ form = """<!DOCTYPE html>
       <h1>Caesar Encrypter</h1>
       <form method="POST">
         <label for="rot">Rotate by:</label>
-        <input type="text" name="rot" value="0">
+        <input type="number" step=1 name="rot" value="0">
         <br />
         <textarea name="text">{0}</textarea>
         <br />
         <input type="submit" value="Send">
       </form>
-      <footer>By: Tommy Campbell<br />Last Updated: 6/11/19</footer>
+      <footer>By: Tommy Campbell<br />Last Updated: 6/13/19</footer>
     </body>
 </html>"""
 
@@ -64,12 +70,10 @@ def index():
 
 @app.route("/", methods=['POST'])
 def encrypt():
-    try:
-        rot = request.form['rot']
-        text = request.form['text']
-        encrypted = rotate_string(text,int(rot))
-        return form.format(encrypted)
-    except ValueError:
-        return form.format('Enter a number in "Rotate by:"')
+    rot = request.form['rot']
+    text = request.form['text']
+    encrypted = rotate_string(text,int(rot))
+    return form.format(encrypted)
+
     
 app.run()
